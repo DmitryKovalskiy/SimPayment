@@ -24,6 +24,8 @@ let BaseModule = function(args, application, data) {
     this._bindHideSubMenu();
 };
 
+BaseModule.referrer = null;
+
 BaseModule.prototype._bindHideSubMenu = function() {
     
     this.events.on('add', this._showSubNavigate.bind(this, false));
@@ -35,7 +37,7 @@ BaseModule.prototype._bindHideSubMenu = function() {
 BaseModule.prototype._showSubNavigate = function(state) {
     
     if (this.hideSubMenu) {
-        window.setTimeout(() => $('.page-with-aside__aside .navigate').eq(1)[state ? 'show' : 'hide'](), 100);
+        window.setTimeout(() => $('.page-with-aside__aside .navigate').eq(1)[state ? 'slideDown' : 'slideUp']('fast'), 100);
     }
 };
 
@@ -45,7 +47,9 @@ BaseModule.prototype._setBreadcrumbs = function() {
     let display = app.getComponent('display');
     let compositePage = display.getCompositePage();
 
-    compositePage._breadcrumbsComponent.addItem(this.breadcrumbs);
+    if (compositePage) {
+        compositePage._breadcrumbsComponent.addItem(this.breadcrumbs);
+    }
 };
 
 BaseModule.prototype._resetBreadcrumbs = function() {
@@ -54,7 +58,20 @@ BaseModule.prototype._resetBreadcrumbs = function() {
     let display = app.getComponent('display');
     let compositePage = display.getCompositePage();
 
-    compositePage._breadcrumbsComponent.removeItems();
+    if (compositePage) {
+        compositePage._breadcrumbsComponent.removeItems();
+    }
+};
+
+BaseModule.prototype.resetBreadcrumbs = function(items) {
+
+    let app = this.getApplication();
+    let display = app.getComponent('display');
+    let compositePage = display.getCompositePage();
+
+    //this.breadcrumbs = items;
+
+    compositePage._breadcrumbsComponent.resetItems(items);
 };
 
 BaseModule.prototype.destructor = function() {

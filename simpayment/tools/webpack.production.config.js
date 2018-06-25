@@ -55,7 +55,7 @@ module.exports = {
                 exclude: /(node_modules)/,
                 include: RESOURCE_PATH,
                 enforce: 'pre',
-                loader: `preprocess-loader?${isForProduction ? '+' : '-'}DEVELOPMENT_INTEGRATION&NODE_ENV=development`
+                loader: `jshint-loader`
             },
 
             // POST LOADERS

@@ -43,7 +43,7 @@ module.exports = {
 
     output: {
         filename: 'assets/[name].js',
-        path: path.posix.join(__dirname, '..', DEVELOPMENT_PATH, 'LK'),
+        path: path.posix.join(__dirname, '..', DEVELOPMENT_PATH, 'WebApp'),
         publicPath: isForProduction ? './../' : '/'
     },
 
@@ -71,13 +71,6 @@ module.exports = {
                 include: RESOURCE_PATH,
                 enforce: 'pre',
                 loader: 'jshint-loader'
-            },
-            {
-                test: /\.js?$/,
-                exclude: /(node_modules)/,
-                include: RESOURCE_PATH,
-                enforce: 'pre',
-                loader: `preprocess-loader?${isForProduction ? '+' : '-'}DEVELOPMENT_INTEGRATION&NODE_ENV=development`
             },
 
             // POST LOADERS
