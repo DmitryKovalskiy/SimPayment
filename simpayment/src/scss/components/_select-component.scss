@@ -1,0 +1,39 @@
+
+select {
+
+  @extend .input[type='text'];
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url('../../images/arrow-down.svg');
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 18px 9px;
+  background-position: 100% 50%;
+  padding-right: 22px;
+
+  .select {
+    &--long {
+      min-width: 195px;
+    }
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:disabled,
+  &:hover:disabled {
+    background-color: #f2f2f2;
+    cursor: default;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #d9d9d9;
+    box-shadow: none;
+  }
+}

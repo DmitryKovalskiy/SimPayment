@@ -1,0 +1,34 @@
+
+.phone {
+
+	display: inline-block;
+	
+	&__container {
+	
+		width: 100%;
+		display: table;
+	    line-height: 36px;
+		
+		&__code {
+		    padding: 9px 10px;
+		    font-size: 14px;
+		    font-weight: normal;
+		    line-height: 1;
+		    color: #666;
+		    text-align: center;
+		    background-color: #eeeeee;
+		    border: 2px solid #ccc;
+			border-radius: 3px 0 0 3px;
+		    display: table-cell;
+		    vertical-align: middle;
+		    width: 1%;
+		}
+			
+		&__input {
+		    border-radius: 0 3px 3px 0 !important;
+		    border-left: none !important;
+		}
+	
+	}	
+
+}

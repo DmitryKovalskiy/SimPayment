@@ -1,0 +1,32 @@
+
+.periods {
+
+  padding: 0 0 0 20px;
+
+  &__item,
+  .item {
+
+    @extend .link;
+
+    font-size: 13px;
+    border-bottom: 1px dotted $primary-color;
+    cursor: pointer;
+
+    &:hover {
+
+      text-decoration: none;
+    }
+
+    &--active {
+
+      border-bottom-style: solid;
+    }
+  }
+
+  &--disabled &__item,
+  &--disabled .item {
+
+    color: $muted-color;
+    border-bottom-color: $muted-color;
+  }
+}

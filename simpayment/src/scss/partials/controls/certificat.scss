@@ -1,0 +1,50 @@
+
+.certificatControl {
+	
+	&__component {
+		
+		text-align: justify;
+		text-align-last: justify;
+		-ms-text-align-last: justify;
+		font-size: 14px;
+		
+		& .alert {
+		  text-align: center;
+		  text-align-last: center;
+		}
+		
+		& .controls {
+		
+			&__certificate {
+		
+	   		    display: inline-block;
+			    vertical-align: middle;
+			    margin-right: 15px;
+		        text-align: right;
+	    		text-align-last: right;
+	    		
+			    & .tp-paragraph {
+			    
+			        text-overflow: ellipsis;
+				    overflow: hidden;
+			    }
+			}
+		
+			&__left, &__right {
+				width: auto;
+			}
+			
+			&__not-active {
+			    
+			    color: $danger-color;
+			    
+	    	    display: inline-block;
+			    overflow: hidden;
+			    max-width: 175px;
+			    vertical-align: middle;
+			    text-align: left;
+			    text-align-last: left;
+		    }
+		}
+	}
+}

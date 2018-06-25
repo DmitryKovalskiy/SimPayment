@@ -1,0 +1,36 @@
+
+@mixin tp-base {
+  
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $default-color-grey;
+}
+
+.tp-header {
+
+  font-family: #{$base-font-family};
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.tp-header-simple {
+
+  font-family: #{$base-font-family};
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.tp-header + *,
+.tp-header-simple + * {
+  margin: 20px 0 0;
+}
+
+.tp-paragraph {
+
+  @include tp-base;
+}
+
+.tp-paragraph + .tp-paragraph {
+  margin: 10px 0 0;
+}

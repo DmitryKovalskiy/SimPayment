@@ -1,0 +1,57 @@
+
+
+.drop-list {
+
+  position: relative;
+  display: inline-block;
+
+  &--disabled &__caption,
+  &--disabled &__arrow {
+    color: $muted-color;
+  }
+
+  &__caption {
+
+    @include tp-base;
+
+    color: $primary-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__arrow {
+
+    @extend .fa;
+    @extend .fa-caret-down;
+
+    margin: 0 0 0 5px;
+  }
+
+  &__items {
+
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    background: #fff;
+    box-shadow: 0 0 1px 2px rgba(0,0,0,.2);
+  }
+
+  &__item {
+
+    display: block;
+    padding: 4px;
+    cursor: pointer;
+
+    &--active {
+      background: rgba($muted-color, .3);
+    }
+
+    &:hover {
+      background: rgba($primary-color, .3);
+    }
+  }
+
+
+}

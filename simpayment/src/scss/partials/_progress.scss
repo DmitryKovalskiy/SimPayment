@@ -1,0 +1,51 @@
+
+.progress {
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &--error &__element { border-color: $danger-color; }
+  &--error &__slider { background: $danger-color; }
+
+  &--warning &__element { border-color: $warning-color; }
+  &--warning &__slider { background: $warning-color; }
+
+  &--primary &__element { border-color: $primary-color; }
+  &--primary &__slider { background: $primary-color; }
+
+  &--success &__element { border-color: $success-color; }
+  &--success &__slider { background: $success-color; }
+
+  &--value-off &__value{
+
+    display: none;
+  }
+
+  &__element {
+
+    display: block;
+    border: 1px solid $muted-color;
+    border-radius: 4px;
+    height: 16px;
+    background: #fff;
+  }
+
+  &__slider {
+
+    display: block;
+    height: inherit;
+    width: 50%;
+    background: $muted-color;
+  }
+
+  &__value {
+
+    position: absolute;
+    top: 3px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-size: 11px;
+  }
+}

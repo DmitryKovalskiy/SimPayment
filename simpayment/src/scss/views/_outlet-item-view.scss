@@ -1,0 +1,136 @@
+
+.outlet {
+
+  &__header {
+    padding: 0 0 20px 0;
+  }
+}
+
+
+.outlet-item {
+
+  display: block;
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  & .status {
+    margin: 0 10px 0 0;
+  }
+
+  &__header {
+
+    display: block;
+    margin: 0 0 10px 0;
+
+    &-controls {
+      text-align: right;
+      float: right;
+      width: 140px;
+    }
+
+    &-name {
+      display: inline-block;
+      text-align: left;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      color: #2b80cf;
+      text-decoration: none;
+      margin: 0 20px 0 0;
+      vertical-align: middle;
+    }
+
+    &-address-title {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 14px;
+      color: #999;
+      vertical-align: middle;
+    }
+
+    &-address {
+      font-weight: 400;
+      font-size: 14px;
+      margin: 0 20px 0 0;
+      vertical-align: middle;
+    }
+
+    &-count {
+      font-size: 18px;
+      color: #333333;
+      vertical-align: middle;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
+  &__information {
+
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+
+    &-summary-title {
+      display: inline-block;
+      font-weight: bold;
+      color: #999;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+
+    & > .controls {
+      margin: 0 0 10px 0;
+    }
+
+  }
+
+  &__settings-link {
+
+    &:before {
+      @extend .fa;
+      @extend .fa-cog;
+      display: inline-block;
+      padding: 0 4px 0 0;
+      font-size: 20px;
+    }
+
+    display: inline-block;
+    text-decoration: none;
+    color: #f1545a;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+
+  &__table {
+    width: 100%;
+  }
+}
+
+.outlet-info {
+
+  &__item {
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: 14px;
+    color: #333;
+    margin-right: 20px;
+  }
+
+  &__count {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+}

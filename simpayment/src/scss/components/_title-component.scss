@@ -1,0 +1,19 @@
+
+.title {
+	
+	font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
+    text-align: left;
+    
+	&__h1 {
+		font-weight: 300;
+    	font-size: 28px;
+	}
+	
+	&__h4 {
+		font-weight: 300;
+    	font-size: 18px;
+	}
+ }

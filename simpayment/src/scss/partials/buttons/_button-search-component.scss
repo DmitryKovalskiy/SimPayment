@@ -1,0 +1,57 @@
+//.button-search-icon {
+//    display: inline-block;
+//    vertical-align: middle;
+//    height:24px;
+//    width:22px;
+//
+//    &__export {
+//        background: url("../../images/icon.export-in-excel.png");
+//    }
+//
+//    &__print {
+//        background: url("../../images/icon.print.png");
+//    }
+//}
+//
+//.second-icon {
+//    margin-left: 23px;
+//}
+
+//.button-search {
+//
+//  @extend .fa;
+//  @extend .fa-search;
+//
+//  display: inline-block;
+//  padding: 12px 0 12px 3px;
+//  border-radius: 5px;
+//  font-family: "Open Sans", sans-serif;
+//  font-size: 25px;
+//  font-weight: 400;
+//  text-decoration: none;
+//  vertical-align: middle;
+//  white-space: nowrap;
+//  background: #fff;
+//  outline: none;
+//  cursor: pointer;
+//  color: #2b80cf;
+//  box-sizing: border-box;
+//  transition: color 200ms, background 200ms, border 200ms;
+//
+//  &:hover {
+//    text-decoration:underline;
+//  }
+//
+//  &:focus {
+//  }
+//
+//  &--disabled,
+//  &:disabled,
+//  &:hover:disabled {
+//    border-color: $muted-color;
+//    background: $muted-color;
+//    color: darken($muted-color, 15%);
+//    text-shadow: 0 1px 0 lighten($muted-color, 20%), 0 -1px 0 darken($muted-color, 30%);
+//  }
+//
+//}

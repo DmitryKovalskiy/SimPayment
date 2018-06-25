@@ -1,0 +1,59 @@
+
+.marker {
+  
+  &--success {
+    color: $success-color;
+  }
+  
+  &--warning {
+    color: $warning-color;
+  }
+  
+  &--danger {
+    color: $danger-color;
+  }
+
+  &--neutral {
+    color: $muted-color;
+  }
+  
+  &--default {
+    color: $muted-color;
+  }
+
+  &--primary {
+    color: $primary-color;
+  }
+
+  &--dotted {
+    border-bottom: 1px dotted $primary-color;
+  }
+
+  &--background {
+    &.marker--success {
+      background: $success-color;
+    }
+
+    &.marker--warning {
+      background: $warning-color;
+    }
+
+    &.marker--danger {
+      background: $danger-color;
+    }
+
+    &.marker--neutral {
+      background: $muted-color;
+    }
+
+    &.marker--default {
+      background: $muted-color;
+    }
+
+    &.marker--primary {
+      background: $primary-color;
+    }
+
+    color: #fff;
+  }
+}

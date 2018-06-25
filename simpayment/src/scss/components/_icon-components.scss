@@ -1,0 +1,171 @@
+
+.icon {
+
+  @extend .fa;
+
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  vertical-align: middle;
+
+  &--success {
+
+    @extend .fa-check-circle;
+  }
+
+  &--settings:before {
+
+    @extend .fa-cog;
+  }
+
+  &--paper-plane:before {
+
+    @extend .fa-paper-plane-o;
+  }
+  
+  &--pencil-square:before {
+  
+  	@extend .fa-pencil-square-o;
+  }
+
+  &--trash {
+
+    @extend .fa-trash;
+  }
+
+  &--tooltip:before {
+
+    @extend .fa-question-circle;
+  }
+
+  &--preload {
+
+    @extend .fa-refresh;
+  }
+  
+  &--inbox {
+  
+    @extend .fa-inbox;
+  }
+  
+  &--caret-down {
+    
+    @extend .fa-caret-down;
+  }
+
+  &--calendar {
+
+    @extend .fa-calendar;
+  }
+  
+  &--pdf {
+    
+    @extend .fa-file-pdf-o;
+  }
+  
+  &--excel{
+    
+    &:before {
+        content: url(../../images/icons/excel.svg);
+    }
+
+    &--disabled{
+
+      &:before {
+          content: url(../../images/icons/excel--disabled.svg);
+      }
+    }
+  }
+  
+  &--info {
+    
+    &:before {
+      
+      @extend .fa-info;
+    }
+  }
+  
+  &--print {
+    
+    &:before {
+        content: url(../../images/icons/print.svg);
+    }
+
+    &--disabled{
+      
+      &:before {
+          content: url(../../images/icons/print--disabled.svg);
+      }
+    }
+  }
+
+  &--search {
+
+    @extend .fa-search;
+  }
+
+  &--big {
+
+    font-size: 23px;
+  }
+
+  &--file {
+
+    @extend .fa-file-text;
+  }
+
+  &--credit-card {
+
+    @extend .fa-credit-card;
+  }
+
+  &--money {
+
+    @extend .fa-money;
+  }
+
+  &--circle {
+  
+    @extend .fa-circle;
+  }
+
+  &--check-circle {
+  
+    @extend .fa-check-circle;
+  }
+  
+  &--angle-double-down {
+  
+    @extend .fa-angle-double-down;
+  }
+  
+  &--angle-double-up {
+  
+    @extend .fa-angle-double-up;
+  }
+
+  &--exclamation-circle {
+  
+    @extend .fa-exclamation-circle;
+  }
+
+  &--times-circle {
+  
+    @extend .fa-times-circle;
+  }
+  
+  &--arrow-up {
+    
+    @extend .fa-arrow-up;
+  }
+  
+  &--arrow-down {
+    
+    @extend .fa-arrow-down;
+  }
+  
+  &--university {
+    
+    @extend .fa-university;
+  }
+}

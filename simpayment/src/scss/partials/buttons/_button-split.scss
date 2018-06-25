@@ -1,0 +1,113 @@
+
+.button-split {
+  
+  position: relative;
+  line-height: 36px;
+  display: inline-block;
+  
+  &:hover {
+      
+    .button-split__select {
+      
+      background: rgba($primary-color, .3);
+    }
+  }
+  
+  &--open {
+    
+    .button-split__options {
+      
+      display: block;
+    }
+  }
+  
+  &__button {
+  
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #2b80cf;
+    padding: 0 20px;
+    border: 2px solid #2b80cf;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: color 200ms, background 200ms, border 200ms;
+    border-radius: 5px 0 0 5px;
+    width: calc(100% - 24px);
+    background: #fff;
+    white-space: nowrap;
+    margin-right: -2px;
+  
+    &--disabled,
+    &:disabled,
+    &:hover:disabled {
+      border-color: $muted-color;
+      background: $muted-color;
+      color: darken($muted-color, 15%);
+      text-shadow: 0 1px 0 lighten($muted-color, 20%), 0 -1px 0 darken($muted-color, 30%);
+    }
+  }
+  
+  &__select {
+     
+    display: inline-block;
+    border: 2px solid #2b80cf;
+    box-sizing: border-box;
+    width: 20px;
+    height: 100%;
+    vertical-align: bottom;
+    border-radius: 0 5px 5px 0;
+    color: #2b80cf;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+      
+      .icon {
+        font-size: 14px;
+      }
+  }
+  
+  &__options {
+  
+    position: absolute;
+    left: 0;
+    box-shadow: 4px 5px 15px 0px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    background: #fff;
+    margin-top: 2px;
+    display: none;
+    z-index: 1;
+  }
+  
+  &__option {
+  
+    list-style: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+    line-height: normal;
+    
+    &:nth-child(odd) {
+      
+      background: #F2F2F2;
+    }
+    
+    &-caption {
+      
+      display: block;
+      padding: 10px 20px;
+      white-space: normal;
+    }
+    
+    &:hover {
+
+      background: rgba($primary-color, .3);
+    }
+  }
+}

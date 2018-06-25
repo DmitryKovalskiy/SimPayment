@@ -1,0 +1,309 @@
+
+.table-container {
+
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.table {
+
+  font-family: $base-font-family;
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  z-index: 0;
+
+  &--cling {
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+
+  &--cling &__header {
+
+    background: #fff;
+  }
+  
+  &__col:hover {
+    background: red;
+  }
+
+  &__header {
+
+    vertical-align: bottom;
+    border-bottom: 1px solid #ccc;
+
+    &-row {}
+
+    &-cell {
+
+      vertical-align: bottom;
+      text-align: left;
+
+      &--center {
+        text-align: center;
+      }
+
+      &--right {
+        text-align: right;
+      }
+    }
+
+    &-caption {
+
+      display: block;
+      padding: 10px 5px;
+      font-size: 13px;
+      font-weight: normal;
+      color: #333;
+    }
+  }
+
+  &__body {
+
+    &-row {
+
+      &:hover {
+        background: #e8f1fa;
+      }
+
+      cursor: pointer;
+
+      &--no-click {
+
+        @extend .table__body-row;
+
+        cursor: initial;
+      }
+      
+      &--disabled{
+        
+        cursor: initial;
+        
+        .tp-paragraph {
+            color: #bbbbbb;
+        }
+      }
+    }
+
+    &-cell {
+
+      vertical-align: middle;
+
+      &--center {
+        text-align: center;
+      }
+
+      &--right {
+        text-align: right;
+      }
+    }
+
+    &-caption {
+
+      @include tp-base;
+
+      display: block;
+      padding: 10px 5px;
+      word-wrap: break-word;
+    }
+  }
+
+  &__footer {
+
+    border-top: 1px solid #ccc;
+
+    &-row { }
+
+    &-cell {
+
+      @extend .table__body-cell;
+
+      padding: 10px 0 0;
+    }
+
+    &-caption {
+
+      @extend .table__body-caption;
+    }
+  }
+
+  &__mode {
+
+    &--amount,
+    &--number {
+      text-align: right;
+    }
+
+    &--date,
+    &--count,
+    &--icon {
+      text-align: center;
+    }
+
+    &--text {
+      text-align: left;
+    }
+  }
+
+  &__align {
+
+    &--left {
+      text-align: left;
+    }
+
+    &--center {
+      text-align: center;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    &--top {
+      vertical-align: top;
+    }
+
+    &--bottom {
+      vertical-align: bottom;
+    }
+  }
+
+  &__caption {
+
+    @include tp-base;
+
+    caption-side: bottom;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__sortable {
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    &--disabled,
+    &--disabled:hover {
+
+      color: $muted-color;
+    }
+
+    &:hover {
+
+      color: $primary-color;
+    }
+  }
+
+  &__sortable &__header-caption {
+
+    font-weight: normal;
+    color: inherit;
+
+    &--active {
+      
+      font-weight: bold;
+    }
+  }
+
+
+  &__sortable--disabled &__arrows--ascent &__arrow-up,
+  &__sortable--disabled &__arrows--descent &__arrow-down {
+
+    color: $muted-color;
+  }
+
+  &__arrows {
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__arrow-up,
+  &__arrow-down {
+
+    @extend .fa;
+
+    display: block;
+    font-size: 12px;
+    color: rgba($muted-color, .5);
+  }
+
+  &__arrow-up {
+
+    @extend .fa-caret-up;
+  }
+
+  &__arrow-down {
+
+    @extend .fa-caret-down;
+
+    margin: -4px 0 0 0;
+  }
+
+  &__caption-container {
+
+    display: inline-block;
+  }
+
+  &__arrows--ascent &__arrow-up,
+  &__arrows--descent &__arrow-down {
+
+    color: $default-color-grey;
+  }
+
+  &__message {
+
+    caption-side: bottom;
+
+    .tp-paragraph {
+
+      margin: 10px 0 0;
+    }
+  }
+
+  &__controls {
+
+    display: inline-block;
+
+    &-button {
+
+      @extend .fa;
+
+      color: #fff;
+      border: none;
+      padding: 3px;
+      border-radius: 3px;
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      cursor: pointer;
+
+      & + & {
+        margin: 0 0 0 4px;
+      }
+
+      &--edit {
+        @extend .fa-pencil-square-o;
+        background: transparent;
+        font-size: 20px;
+        color: #2b80cf;
+      }
+
+      &--delete {
+        @extend .fa-trash-o;
+        background: transparent;
+        font-size: 20px;
+        color: $danger-color;
+      }
+
+      &--cancel {
+        @extend .fa-times;
+        background: $warning-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+
+.form {
+
+  display: block;
+
+  &--require:after {
+
+    display: inline-block;
+    content: '*';
+    color: red;
+    padding: 0 0 0 3px;
+  }
+
+  &__line {
+
+    display: block;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__label {
+
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+
+    &--right {
+      text-align: right;
+    }
+
+    &--require {
+
+      &--left {
+
+        &:before {
+          display: inline-block;
+          content: '*';
+          color: red;
+          vertical-align: middle;
+          margin: 0 4px 0 0;
+        }
+      }
+
+      &:after {
+        display: inline-block;
+        content: '*';
+        color: red;
+        vertical-align: middle;
+        margin: 0 0 0 4px;
+      }
+    }
+  }
+}
+
+.help-block .text-error {
+  font-family: "Open Sans", sans-serif;
+  color: #de7860;
+  font-size: 14px;
+}

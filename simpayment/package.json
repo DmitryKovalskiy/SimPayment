@@ -1,0 +1,25 @@
+{
+  "name": "simpayment",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel": "^6.23.0",
+    "bootstrap": "^4.1.1",
+    "compression-webpack-plugin": "^1.1.11",
+    "font-awesome": "^4.7.0",
+    "glyphicons": "^0.2.0",
+    "html-loader": "^0.5.5",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.0",
+    "npm-font-open-sans": "^1.1.0",
+    "preprocess-loader": "^0.2.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "sass-loader": "^7.0.3"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config=./tools/webpack.development.config.js --hot --watch-poll --port 8080",
+    "build": "set NODE_ENV=development&&webpack --progress --config=./tools/webpack.production.config.js"
+  }
+}

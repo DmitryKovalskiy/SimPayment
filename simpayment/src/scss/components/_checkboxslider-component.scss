@@ -1,0 +1,142 @@
+.checkboxslider {
+
+  height: 47px;
+  display: inline-block;
+  font-size: 8px;
+  color: transparent;
+  vertical-align: middle;
+  position: relative;
+
+  &--small &__visual {
+
+    width: 14px;
+    height: 14px;
+
+    &:before {
+      font-size: 8px !important;
+    }
+  }
+
+  &__border {
+    @extend .fa;
+
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+    background: transparent;
+    border: 2px solid #2b80cf;
+    border-radius: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    //text-align: center;
+    transition: color 200ms, background 200ms;
+    position: relative;
+  }
+
+  &__visual {
+    @extend .fa;
+
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    left: 2px;
+    background: transparent;
+    border: 2px solid #2b80cf;
+    border-radius: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    transition: color 200ms, background 200ms;
+    position: absolute;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .checkboxslider__border {
+      .checkboxslider__visual {
+        @extend .fa-check;
+
+        left: auto;
+        right: 1px;
+
+        display: inline-block;
+        background: #2b80cf;
+
+        &:before {
+          display: inline-block;
+          margin-top: 3px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &:indeterminate + .checkboxslider__border {
+      .checkboxslider__visual {
+        @extend .fa-stop;
+
+        display: inline-block;
+        background: #2b80cf;
+
+        &:before {
+
+          display: inline-block;
+          margin-top: 3px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    &:disabled + .checkboxslider__caption,
+    &:disabled + .checkboxslider__border .checkboxslider__visual {
+
+      background: transparent;
+      border-color: #ccc;
+      color: $muted-color;
+      cursor: default;
+
+      &:before {
+        color: #ccc;
+      }
+    }
+  }
+
+  &__visual + &__caption {
+
+    margin: 0 0 0 4px;
+    transition: color 200ms, background 200ms;
+  }
+
+  &__caption {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    vertical-align: middle;
+  }
+
+  &--checked {
+    color: #fff;
+  }
+
+  &--indeterminate {
+    @extend .fa-minus;
+  }
+
+  &--text > &__caption {
+    @extend .marker--primary;
+
+    font-size: 12px;
+    padding: 0 4px;
+    border-radius: 3px;
+    border-bottom: 1px dotted $primary-color;
+    cursor: pointer;
+  }
+
+  &--text.checkbox--active &__input:disabled + &__caption {
+    @extend .marker--default;
+    border-bottom-color: inherit;
+  }
+}

@@ -1,0 +1,54 @@
+
+
+.error {
+
+  @include tp-base;
+
+  display: none;
+  padding: 5px 0 0;
+  color: $danger-color;
+  font-family: $base-font-family;
+  line-height: 1;
+
+  & + & {
+  
+  	margin-top: 0;
+  }
+
+  &--show {
+
+    display: block;
+  }
+
+  &--block {
+
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    background-color: #f2dede;
+    color: #de7860;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.warning {
+
+  @extend .error;
+
+  color: $warning-color;
+
+  &--show {
+    
+    @extend .error--show;
+  }
+
+  &--block {
+
+    @extend .error--block;
+
+    color: #FDC575;
+  }
+}

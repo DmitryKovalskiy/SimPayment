@@ -1,0 +1,37 @@
+
+.button-update-component {
+
+  display: block;
+  text-align: right;
+  margin: 10px 0;
+  font-size: 13px;
+  color: $danger-color;
+  cursor: pointer;
+
+  &--disabled {
+
+    color: $muted-color;
+  }
+
+  &__content {
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__icon {
+
+    @extend .fa;
+    @extend .fa-refresh;
+
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+  }
+
+  &--process .button-update__icon {
+
+    @extend .fa-spin;
+    color: $primary-color;
+  }
+}

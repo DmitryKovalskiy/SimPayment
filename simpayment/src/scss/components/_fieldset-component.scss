@@ -1,0 +1,90 @@
+
+.fieldset {
+
+  border: 0;
+  min-width: 0;
+  & + & {
+
+    margin: 10px 0 0;
+  }
+
+  & + .controls {
+
+    margin: 40px 0 20px 0;
+  }
+
+  &__indent-right {
+
+    padding-right: 328px;
+  }
+
+  &__row {
+
+    padding-top: 25px;
+
+    &:first-child {
+
+      padding-top: 0;
+    }
+
+    & + .controls {
+
+      margin-top: 40px;
+    }
+  }
+
+  &__cell {
+
+    display: inline-block;
+    padding-left: 15px;
+    width: calc(100% - 340px);
+
+    vertical-align: middle;
+    position: relative;
+
+    &:first-child {
+
+      padding: 0;
+      width: 320px;
+    }
+  }
+  &__cell + &__cell {
+    margin: 15px 0 0;
+  }
+
+  &__cell + &__cell {
+    margin: 15px 0 0;
+  }
+
+  &--shift-left {
+
+    width: calc(100% - 170px);
+
+    &:first-child {
+      width: 150px;
+    }
+  }
+}
+
+.field-set {
+
+  display: block;
+  text-align: left;
+
+  &__line {
+
+    display: block;
+    font-size: 0;
+    white-space: nowrap;
+  }
+
+  &__line + &__line {
+
+    margin: 20px 0 0;
+  }
+
+  &__cell {
+
+    display: inline-block;
+  }
+}

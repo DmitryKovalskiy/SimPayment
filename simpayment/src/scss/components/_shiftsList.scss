@@ -1,0 +1,67 @@
+
+.shiftsList {
+
+	&__container {
+		
+	}
+	
+	&__item {
+	
+		display: inline-block;
+	    background: $muted-color;
+	    box-sizing: border-box;
+	    text-align: center;
+        margin: 0 -2px 2px 0;
+	    
+	    &--active {
+	    	
+	    	background: $success-color;
+	    }
+	    
+	    &:hover {
+	    	
+	    	background: $shift-color-hover;
+	    }
+	}
+	
+	&__button {
+
+	    display: inline-block;
+	    vertical-align: middle;
+	    background: none;
+		width: 77px;
+    	height: 81px;
+	    font-size: 11px;
+        padding: 0;
+    	color: #fff;
+    	border: none;
+    	cursor: pointer;
+    	
+    	&--disabled {
+    		
+    		background: #999;
+    		color: #333;
+		    cursor: default;
+    	}
+    	
+    	&--preload {
+    	
+    		font-size: 0;
+    	
+    		&:before {
+    		
+	    	    @extend .fa;
+		    	@extend .fa-spinner;
+		    	@extend .fa-spin;
+	    	    color: #fff;
+		        margin: 0 auto;
+			    font-size: 25px;
+    		}
+    	}
+    	
+    	&:focus {
+    	
+    		outline: none;
+    	}
+	}
+}

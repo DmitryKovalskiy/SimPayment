@@ -1,0 +1,44 @@
+
+.controls {
+
+  display: block;
+  font-size: 0;
+
+  &--top {
+    .controls__left,
+    .controls__right {
+      vertical-align: top !important;
+    }
+  }
+
+  &__left,
+  &__right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  &__center {
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
+  &--help {
+	font-size: 14px;
+	margin-top: -32px;
+  }
+  
+  &--padding-left {
+  	padding-left: 10px;
+  }
+  
+  &--padding-right {
+  	padding-right: 10px;
+  }
+}

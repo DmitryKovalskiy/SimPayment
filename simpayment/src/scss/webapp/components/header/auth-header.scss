@@ -1,0 +1,99 @@
+
+.header {
+
+  padding: 8px 0;
+  background: $header-background;
+
+  &__brand,
+  &__user-info,
+  &__controls,
+  &__combobox {
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__brand {
+
+    width: 265px;
+  }
+
+  &__user-info {
+  
+	width: 565px;
+  }
+
+  &__controls {
+
+    width: 360px;
+    text-align: right;
+  }
+}
+
+.logotype {
+
+  display: block;
+  text-decoration: none;
+  line-height: 30px;
+
+  &__icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url("../../images/signal-tower.png");
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+    vertical-align: top;
+  }
+
+  &__test-info {
+    margin-left: 62px;
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    margin-top: -25px;
+  }
+}
+
+.account {
+  color: #fff;
+  font-size: 14px;
+
+  &__organization-name {
+    display: inline-block;
+    max-width: 420px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__organization-inn {
+    display: inline-block;
+    margin-top: 6px;
+  }
+}
+
+.menu-img {
+  font-size: 16px;
+  padding: 0 11px 0 11px;
+  margin-right: 5px;
+} 
+
+.menu-img.img-user {
+  background: url('../../images/menu-user.png') no-repeat 50% 50%;
+}
+
+.menu-img.img-user-pass {
+  background: url('../../images/menu-user-pass.png') no-repeat 50% 50%;
+}
+
+.menu-img.img-qrcode {
+  background: url('../../images/menu-qr.png') no-repeat 50% 50%;
+}

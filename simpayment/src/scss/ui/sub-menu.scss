@@ -1,0 +1,72 @@
+
+.sub-navigate {
+
+  display: block;
+  border-bottom: 1px solid #ccc;
+
+  &__item {
+
+    display: inline-block;
+    color: $default-color-grey;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 50ms;
+  }
+
+  &__item:hover {
+
+    border-bottom: 4px solid rgba($muted-color, .2);
+  }
+
+  &__item--active,
+  &__item--active:hover {
+
+    border-bottom: 4px solid $primary-color;
+  }
+
+  &__item--active &__link {
+
+    color: rgba($default-color-grey, .8);
+  }
+
+  &__item--active &__link,
+  &__item:hover &__link {
+
+    padding-bottom: 11px;
+  }
+
+  &__item--disabled,
+  &__item--disabled:hover {
+
+    color: rgba($muted-color, .4);
+    border-bottom: none;
+    cursor: default;
+  }
+
+  &__item--disabled &__link,
+  &__item--disabled:hover &__link {
+
+    padding-bottom: 15px;
+  }
+
+  &__link {
+
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__caption {
+
+    display: inline-block;
+    font-size: 14px;
+    color: inherit;
+    vertical-align: middle;
+  }
+
+  &__caption + * {
+
+    margin: 0 0 0 5px;
+  }
+}

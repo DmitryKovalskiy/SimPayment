@@ -1,0 +1,30 @@
+
+.filter {
+
+  display: block;
+
+  &__fixed {
+
+    display: block;
+    float: right;
+    width: 252px;
+  }
+
+  &__stretch {
+
+    display: block;
+
+    width: 100%;
+    padding-right: 272px;
+    box-sizing: border-box;
+  }
+
+  &__stretch-content {
+
+    display: block;
+    padding: 20px;
+    width: 100%;
+    background: #f2f2f2;
+    box-sizing: border-box;
+  }
+}

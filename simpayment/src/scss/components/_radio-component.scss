@@ -1,0 +1,63 @@
+
+.radio {
+
+  display: inline-block;
+  cursor: pointer;
+  line-height: 40px;
+
+  &__input {
+
+    display: none;
+  }
+
+  &__visual {
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2b80cf;
+    border-radius: 50%;
+    -webkit-transition: backgrount 200ms;
+    transition: backgrount 200ms;
+    vertical-align: middle;
+  }
+
+  &__caption {
+
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    padding: 0 8px;
+    min-width: 18px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__input:checked + &__caption {
+
+    color: #fff;
+    background: $primary-color;
+  }
+
+  &__input:checked + &__visual {
+
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: $primary-color;
+      border-radius: 50%;
+      margin: -7px 0 0 -7px;
+    }
+  }
+  
+  &__input:checked:disabled + &__visual {
+    background: $muted-color;
+  }
+}

@@ -1,0 +1,22 @@
+
+.client-autocomplite-item {
+
+  font-family: "Open Sans", sans-serif;
+  padding: 2px;
+  margin: 0;
+  display: inline-block;
+
+  &__name {
+    font-size: 14px;
+    padding: 2px;
+    padding: 3px;
+  }
+
+  &__inn, &__kpp, &__ogrn {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    color: #333333;
+  }
+ 
+}
