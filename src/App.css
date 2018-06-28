@@ -1,0 +1,51 @@
+@import 'scss/outsource.css';
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: left;
+  background-color:#0099ff;;
+  height: 90px;
+  padding: 0px 15px ; 
+  color: white;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-header___LogoBox{
+  padding: 05px ;
+  width: 80px;
+}
+.App-header___TextBox{
+  padding : 10px; 
+  text-align: left;
+  font-family: 'Open Sans';
+  src: url('./fonts/opensans/files/OpenSans-Regular.eot');
+  src: url('./fonts/opensans/files/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/opensans/files/OpenSans-Regular.woff') format('woff'),
+    url('./fonts/opensans/files/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+.center-container{
+  align-content: center
+}
+.selectElement{
+  width: 100%;
+}
+.PaymentFormComponent__header{
+  text-align: center;
+ font-weight: bold;
+ padding-top: 100px;
+}
+.smallLink{
+  font-size: 14px;
+}
